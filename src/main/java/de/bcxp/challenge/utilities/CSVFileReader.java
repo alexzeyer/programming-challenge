@@ -12,8 +12,10 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class CSVFileReader implements IFileReader {
-    // Meine Wahl für ein Data-To-Model Mapper fiel auf OpenCSV, da man mithilfe der Annotations in der WeatherDataBean
-    // ziemlich einfach direkt die CSV Daten mappen kann.
+    /*
+    Meine Wahl für ein Data-To-Model Mapper fiel auf OpenCSV, da man mithilfe der Annotations in der WeatherDataBean
+    ziemlich einfach direkt die CSV Daten in die Bean mappen kann.
+     */
 
     public List readFile(String filePath, Class targetClass, char separator)  throws IOException, URISyntaxException {
         Path path = Paths.get(ClassLoader.getSystemResource(filePath).toURI());
